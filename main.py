@@ -9,7 +9,7 @@ pygame.init()
 # display surface
 screen = pygame.display.set_mode((800,400))
 screen.fill("white")
-pygame.display.set_caption("Pixel Stride")
+pygame.display.set_caption("Pixel-Stride")
 background = pygame.image.load("Sky.png").convert()
 
 # ground
