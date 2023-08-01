@@ -20,12 +20,13 @@ ground_rect = ground.get_rect(midtop = (400,300))
 player = Character(screen)
 
 score = 0
-game_font = pygame.font.Font("pygame zero-to-hero-assets/Pixeltype.ttf",50)
-score_text = game_font.render(f"Score:{score}", False, (64,64,64))
-score_text_rect = score_text.get_rect(center = (400,100))
+# game_font = pygame.font.Font("pygame zero-to-hero-assets/Pixeltype.ttf",50)
+# score_text = game_font.render(f"Score:{score}", False, (64,64,64))
+# score_text_rect = score_text.get_rect(center = (400,100))
 
 # clock object
 clock = pygame.time.Clock()
+
 
 
 while True:
