@@ -16,7 +16,7 @@ background = pygame.image.load("Sky.png").convert()
 ground = pygame.image.load("ground.png").convert()
 ground_rect = ground.get_rect(midtop = (400,300))
 
-# player chracter
+# player character
 player = Character(screen)
 
 score = 0
@@ -39,7 +39,7 @@ while True:
 
     screen.blit(ground,ground_rect)
     screen.blit(player.player_image, player.player_image_rect)
-    player.move_character()
+    player.move_character() 
     pygame.display.update()
     clock.tick(60)
 
