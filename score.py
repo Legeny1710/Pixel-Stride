@@ -16,8 +16,8 @@ class Score:
             if score_file.readline() == "":
                 score_file.write("best_score: 0")
 
-    def update_score(self):
-        self.current_score += 0.2
+    def update_score(self,start_time):
+        self.current_score = (pygame.time.get_ticks() - start_time) / 1000
         self.score_text = self.game_font.render(f"Score: {int(self.current_score)}", False, (64, 64, 64))
         self.score_text_rect = self.score_text.get_rect(center=(400, 100))
 

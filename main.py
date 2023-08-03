@@ -27,7 +27,10 @@ game_font = pygame.font.Font("Pixeltype.ttf", 50)
 score_text = game_font.render(f"Score:{score}", False, (64, 64, 64))
 score_text_rect = score_text.get_rect(center=(400, 100))
 
-vel = 100
+# game_variables
+start_time = 0
+# vel = 100
+# jump = False
 
 keys = pygame.key.get_pressed()
 
@@ -43,26 +46,24 @@ while True:
             pygame.quit()
             exit()
         if event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_SPACE:
-                pygame.time.delay(100)
-                print("Space")
-                player.player_image_rect.y -= vel
-
+            if event.key == pygame.K_SPACE and player.player_image_rect.bottom >= 300:
+                player_gravity = -20
 
 
     screen.blit(ground, ground_rect)
-    score.update_score()
+    score.update_score(start_time)
     screen.blit(score.score_text,score.score_text_rect)
 
 
     # Player
     player_gravity += 1
     player.player_image_rect.y += player_gravity
-    if player.player_image_rect.y >= 215:
-        player.player_image_rect.y = 215
+    if player.player_image_rect.bottom >= 300:
+        player.player_image_rect.bottom = 300
 
     screen.blit(player.player_image, player.player_image_rect)
     #player.move_character()
+
     pygame.display.update()
     clock.tick(60)
 
