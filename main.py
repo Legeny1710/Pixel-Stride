@@ -96,7 +96,8 @@ while True:
                 else:
                     enemies_sprite_group.add(Snail())
             enemy_spawn_count += 1
-            if enemy_spawn_count == 4:
+
+            if enemy_spawn_count == 3:
                 enemy_spawn_count = 1
 
 
