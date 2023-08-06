@@ -1,1 +1,1 @@
-best_score: 3666
+best_score: 76
