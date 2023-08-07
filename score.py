@@ -8,9 +8,9 @@ class Score:
     def __init__(self):
         pygame.font.init()
         self.game_font = pygame.font.Font("Pixeltype.ttf", 50)
-        self.score_text = self.game_font.render(f"Score:{self.current_score}", False, (64, 64, 64))
+        self.score_text = self.game_font.render(f"Score:{self.current_score}", False, (255, 255, 255))
         self.score_text_rect = self.score_text.get_rect(center=(400, 100))
-        self.best_score_text = self.game_font.render(f"Best Score: 0", False, (64, 64, 64))
+        self.best_score_text = self.game_font.render(f"Best Score: 0", False, (255, 255, 255))
         self.best_score_text_rect = self.best_score_text.get_rect(center=(400, 100))
         with open("score_storage.txt", "r+") as score_file:
             if score_file.readline() == "":
@@ -18,7 +18,7 @@ class Score:
 
     def update_score(self,start_time):
         self.current_score = (pygame.time.get_ticks() - start_time) / 1000
-        self.score_text = self.game_font.render(f"Score: {int(self.current_score)}", False, (64, 64, 64))
+        self.score_text = self.game_font.render(f"Score: {int(self.current_score)}", False, (255, 255, 255))
         self.score_text_rect = self.score_text.get_rect(center=(400, 100))
 
     def save_score(self):
