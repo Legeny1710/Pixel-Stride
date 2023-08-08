@@ -74,7 +74,7 @@ score = Score()
 
 # game variables
 game_font = pygame.font.Font("Pixeltype.ttf", 50)
-story_font = pygame.font.Font("Pixeltype.ttf",20)
+story_font = pygame.font.Font("Pixeltype.ttf",21)
 
 score_text = game_font.render(f"Score:{score}", False, (255, 255, 255))
 score_text_rect = score_text.get_rect(center=(400, 100))
