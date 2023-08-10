@@ -24,8 +24,6 @@ pygame.init()
 
 
 
-
-
 # display surface
 screen = pygame.display.set_mode((800, 400))
 pygame.display.set_caption("Pixel-Stride")
