@@ -27,6 +27,10 @@ pygame.init()
 # display surface
 screen = pygame.display.set_mode((800, 400))
 pygame.display.set_caption("Pixel-Stride")
+
+icon = pygame.image.load("hunter_1.png").convert_alpha()
+pygame.display.set_icon(icon)
+
 background = pygame.image.load("fores_background.png").convert()
 background = pygame.transform.scale(background, (800, 300))
 
@@ -122,7 +126,7 @@ def collision_sprite():
         return False
     return True
 
-# bg_music.play(loops= -1)
+bg_music.play(loops= -1)
 
 while True:
 
